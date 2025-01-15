@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h2>Employee Entry</h2>
+      <form id="employeeForm">
+        <input type="text" id="employeeName" placeholder="Enter Name" required>
+        <input type="text" id="employeeRole" placeholder="Enter Role" required>
+        <input type="text" id="employeePrivileges" placeholder="Enter Privileges" required>
+        <button type="submit">Add Employee</button>
+      </form>
+    </div>
+    <div class="right">
+      <h2>Employee DB</h2>
+      <div id="employeeList">
+        <!-- Data from DB will be displayed here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
