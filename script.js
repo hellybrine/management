@@ -1,3 +1,5 @@
+const apiGatewayUrl = 'https://8um8pwu535.execute-api.eu-north-1.amazonaws.com/Test';
+
 function addEmployee() {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
@@ -15,7 +17,7 @@ function addEmployee() {
             status: status
         };
 
-        fetch('https://your-api-gateway-url/employee', {
+        fetch(apiGatewayUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -72,7 +74,7 @@ function filterTable() {
 }
 
 function fetchEmployees() {
-    fetch('https://your-api-gateway-url/employee?operation=view', {
+    fetch(apiGatewayUrl + '?operation=view', {
         method: 'GET',
         headers: {
             'Accept': 'application/json'
@@ -110,7 +112,7 @@ function deleteEmployee(employeid) {
         employeid: employeid
     };
 
-    fetch('https://your-api-gateway-url/employee', {
+    fetch(apiGatewayUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
