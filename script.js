@@ -1,4 +1,4 @@
-const apiGatewayUrl = 'https://Test';
+const apiGatewayUrl = 'https://your-api-gateway-url/employee';
 
 function addEmployee() {
     const name = document.getElementById('name').value;
