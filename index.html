@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Management</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Same styling as before */
-    </style>
 </head>
 <body>
     <div class="container">
@@ -32,13 +29,13 @@
                 <option value="other">Other</option>
             </select>
 
-            <button>Insert</button>
+            <button onclick="addEmployee()">Insert</button>
         </div>
 
         <div class="table-section">
             <h2>Employee List</h2>
             <div class="search-bar">
-                <input type="text" id="search" placeholder="Search...">
+                <input type="text" id="search" placeholder="Search..." oninput="filterTable()">
             </div>
             <table>
                 <thead>
@@ -48,7 +45,6 @@
                         <th>Role</th>
                         <th>ID</th>
                         <th>Status</th>
-                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody id="employeeTableBody">
@@ -56,5 +52,6 @@
             </table>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
