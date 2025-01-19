@@ -1,30 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Employee Management</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="left">
-      <h2>Employee Entry</h2>
-      <form id="employeeForm">
-        <input type="text" id="employeeName" placeholder="Enter Name" required>
-        <input type="text" id="employeeRole" placeholder="Enter Role" required>
-        <input type="text" id="employeePrivileges" placeholder="Enter Privileges" required>
-        <button type="submit">Add Employee</button>
-      </form>
-    </div>
-    <div class="right">
-      <h2>Employee DB</h2>
-      <div id="employeeList">
-        <!-- Data from DB will be displayed here -->
-      </div>
-    </div>
-  </div>
+    <div class="container">
+        <div class="form-section">
+            <h2>Employee Data Entry</h2>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter name">
 
-  <script src="script.js"></script>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter email">
+
+            <label for="role">Role</label>
+            <input type="text" id="role" placeholder="Enter role">
+
+            <label for="id">Employee ID</label>
+            <input type="text" id="id" placeholder="Enter employee ID">
+
+            <label for="status">Employment Status</label>
+            <select id="status">
+                <option value="employed">Employed</option>
+                <option value="unemployed">Unemployed</option>
+                <option value="other">Other</option>
+            </select>
+
+            <button onclick="addEmployee()">Insert</button>
+        </div>
+
+        <div class="table-section">
+            <h2>Employee List</h2>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search employees..." oninput="filterTable()">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Employee ID</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
