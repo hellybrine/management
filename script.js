@@ -1,4 +1,4 @@
-const apiGatewayUrl = 'https://8um8pwu535.execute-api.eu-north-1.amazonaws.com/Test';
+const apiGatewayUrl = 'https://Test';
 
 function addEmployee() {
     const name = document.getElementById('name').value;
